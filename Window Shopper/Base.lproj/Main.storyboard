@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,22 +19,34 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperBG" translatesAutoresizingMaskIntoConstraints="NO" id="Mqz-sU-nhq">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="windowShopperIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hiN-Fz-Y1w">
-                                <rect key="frame" x="111" y="79" width="192" height="60"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hiN-Fz-Y1w">
+                                <rect key="frame" x="177" y="79" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="FWF-x4-bun"/>
                                     <constraint firstAttribute="height" constant="60" id="qBe-W4-mcd"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Hourly Wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S9n-9K-kf7" customClass="CurrencyTextField" customModule="Window_Shopper" customModuleProvider="target">
+                                <rect key="frame" x="80" y="174" width="254" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="y5R-yy-n14"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hiN-Fz-Y1w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="PF3-B8-dDH"/>
                             <constraint firstItem="Mqz-sU-nhq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="U2S-Av-3KF"/>
+                            <constraint firstItem="S9n-9K-kf7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Xbb-gp-51l"/>
                             <constraint firstItem="Mqz-sU-nhq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hQh-FE-ZeM"/>
                             <constraint firstItem="Mqz-sU-nhq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jNe-69-iBc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S9n-9K-kf7" secondAttribute="trailing" constant="80" id="klp-NG-sof"/>
                             <constraint firstAttribute="bottom" secondItem="Mqz-sU-nhq" secondAttribute="bottom" id="lLp-nS-qB5"/>
+                            <constraint firstItem="S9n-9K-kf7" firstAttribute="top" secondItem="hiN-Fz-Y1w" secondAttribute="bottom" constant="35" id="p11-ik-mp6"/>
+                            <constraint firstItem="hiN-Fz-Y1w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xD0-Wf-aNd"/>
                         </constraints>
                     </view>
                 </viewController>
