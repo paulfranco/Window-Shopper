@@ -43,17 +43,53 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ys-V4-NPc">
+                                <rect key="frame" x="169" y="329" width="76" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy2-uJ-Csd">
+                                <rect key="frame" x="169" y="377" width="76" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pBH-bo-WR9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROw-fP-HOb">
+                                <rect key="frame" x="20" y="802" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KPx-0B-wXw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Td1-RW-jvu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ROw-fP-HOb" secondAttribute="bottom" constant="20" id="14B-lL-nfY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Ni-Xz-i3U" secondAttribute="trailing" constant="20" id="5YI-Do-1tc"/>
                             <constraint firstItem="hiN-Fz-Y1w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="PF3-B8-dDH"/>
+                            <constraint firstItem="Xy2-uJ-Csd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QuN-pd-1Lr"/>
+                            <constraint firstItem="Xy2-uJ-Csd" firstAttribute="top" secondItem="7Ys-V4-NPc" secondAttribute="bottom" constant="5" id="TTi-bp-lT0"/>
                             <constraint firstItem="Mqz-sU-nhq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="U2S-Av-3KF"/>
                             <constraint firstItem="S9n-9K-kf7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xbb-gp-51l"/>
                             <constraint firstItem="0Ni-Xz-i3U" firstAttribute="top" secondItem="S9n-9K-kf7" secondAttribute="bottom" constant="25" id="dTr-do-142"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ROw-fP-HOb" secondAttribute="trailing" constant="20" id="dWE-Ng-gHi"/>
+                            <constraint firstItem="7Ys-V4-NPc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eEp-NF-vBA"/>
                             <constraint firstItem="0Ni-Xz-i3U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gGa-E3-eFy"/>
+                            <constraint firstItem="7Ys-V4-NPc" firstAttribute="width" secondItem="0Ni-Xz-i3U" secondAttribute="width" multiplier="0.203209" id="gtX-VI-CDj"/>
                             <constraint firstItem="Mqz-sU-nhq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hQh-FE-ZeM"/>
+                            <constraint firstItem="ROw-fP-HOb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j5c-su-qtq"/>
+                            <constraint firstItem="7Ys-V4-NPc" firstAttribute="top" secondItem="0Ni-Xz-i3U" secondAttribute="bottom" constant="40" id="jA7-aH-MTD"/>
                             <constraint firstItem="Mqz-sU-nhq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jNe-69-iBc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S9n-9K-kf7" secondAttribute="trailing" constant="20" id="klp-NG-sof"/>
                             <constraint firstAttribute="bottom" secondItem="Mqz-sU-nhq" secondAttribute="bottom" id="lLp-nS-qB5"/>
@@ -62,7 +98,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="hoursLabel" destination="Xy2-uJ-Csd" id="d7m-K5-vWI"/>
                         <outlet property="itemPriceTextField" destination="0Ni-Xz-i3U" id="EAg-FH-Ujq"/>
+                        <outlet property="resultLabel" destination="7Ys-V4-NPc" id="Wbc-rU-qBq"/>
                         <outlet property="wageTextField" destination="S9n-9K-kf7" id="iTF-ij-bGk"/>
                     </connections>
                 </viewController>
