@@ -27,34 +27,58 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Hourly Wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S9n-9K-kf7" customClass="CurrencyTextField" customModule="Window_Shopper" customModuleProvider="target">
-                                <rect key="frame" x="80" y="174" width="254" height="45"/>
+                                <rect key="frame" x="20" y="174" width="374" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="y5R-yy-n14"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Ni-Xz-i3U" customClass="CurrencyTextField" customModule="Window_Shopper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="244" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="6Yd-5f-0ZB"/>
+                                    <constraint firstAttribute="height" constant="45" id="Wc9-wb-5hE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Ni-Xz-i3U" secondAttribute="trailing" constant="20" id="5YI-Do-1tc"/>
                             <constraint firstItem="hiN-Fz-Y1w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="PF3-B8-dDH"/>
                             <constraint firstItem="Mqz-sU-nhq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="U2S-Av-3KF"/>
-                            <constraint firstItem="S9n-9K-kf7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Xbb-gp-51l"/>
+                            <constraint firstItem="S9n-9K-kf7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xbb-gp-51l"/>
+                            <constraint firstItem="0Ni-Xz-i3U" firstAttribute="top" secondItem="S9n-9K-kf7" secondAttribute="bottom" constant="25" id="dTr-do-142"/>
+                            <constraint firstItem="0Ni-Xz-i3U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gGa-E3-eFy"/>
                             <constraint firstItem="Mqz-sU-nhq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hQh-FE-ZeM"/>
                             <constraint firstItem="Mqz-sU-nhq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jNe-69-iBc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S9n-9K-kf7" secondAttribute="trailing" constant="80" id="klp-NG-sof"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S9n-9K-kf7" secondAttribute="trailing" constant="20" id="klp-NG-sof"/>
                             <constraint firstAttribute="bottom" secondItem="Mqz-sU-nhq" secondAttribute="bottom" id="lLp-nS-qB5"/>
                             <constraint firstItem="S9n-9K-kf7" firstAttribute="top" secondItem="hiN-Fz-Y1w" secondAttribute="bottom" constant="35" id="p11-ik-mp6"/>
                             <constraint firstItem="hiN-Fz-Y1w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xD0-Wf-aNd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemPriceTextField" destination="0Ni-Xz-i3U" id="EAg-FH-Ujq"/>
+                        <outlet property="wageTextField" destination="S9n-9K-kf7" id="iTF-ij-bGk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="0Ni-Xz-i3U">
+            <size key="intrinsicContentSize" width="65" height="18.666666666666668"/>
+        </designable>
+        <designable name="S9n-9K-kf7">
+            <size key="intrinsicContentSize" width="116" height="18.666666666666668"/>
+        </designable>
+    </designables>
     <resources>
         <image name="windowShopperBG" width="414" height="736"/>
         <image name="windowShopperIcon" width="115" height="115"/>
